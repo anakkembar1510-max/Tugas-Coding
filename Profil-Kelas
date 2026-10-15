@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direktori Profil Kelas X RPL 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        /* Header Section */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            font-size: 22px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .header p {
+            font-size: 13px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Info Umum Kelas Table */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            font-size: 13px;
+        }
+        .info-table th, .info-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .info-table th {
+            width: 25%;
+            background-color: #f1f5f9;
+            color: #334155;
+        }
+        .info-table td {
+            width: 75%;
+            background-color: #ffffff;
+        }
+
+        /* Daftar Anggota */
+        .member-list {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            font-size: 13px;
+        }
+        .member-list ol {
+            padding-left: 20px;
+        }
+        .member-list li {
+            margin-bottom: 4px;
+        }
+        .member-list a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .member-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Profil Siswa Card */
+        .student-card {
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            background: #fff;
+            overflow: hidden;
+        }
+        .student-card-header {
+            background-color: #f1f5f9;
+            padding: 10px 15px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #1e293b;
+            border-bottom: 1px solid #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .student-card-body {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+        .student-photo-col {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .photo-box {
+            width: 140px;
+            height: 180px;
+            border: 2px solid #cbd5e1;
+            background-color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 12px;
+            border-radius: 4px;
+        }
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .audio-player {
+            width: 100%;
+            font-size: 11px;
+            color: #475569;
+            text-align: center;
+        }
+        .audio-player audio {
+            width: 100%;
+            height: 30px;
+            margin-top: 4px;
+        }
+        .student-info-col {
+            width: 65%;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .student-details {
+            list-style: none;
+        }
+        .student-details li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+        .student-details li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0f172a;
+            font-weight: bold;
+        }
+        .link-history {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #e2e8f0;
+            font-size: 13px;
+        }
+        .link-history a {
+            color: #2563eb;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+        }
+        .link-history a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back to top */
+        .back-to-top {
+            text-align: right;
+            font-size: 12px;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            padding-right: 5px;
+        }
+        .back-to-top a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .back-to-top a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="top">
+        
+        <!-- Header -->
+        <div class="header">
+            <h1>🎓 DIREKTORI PROFIL KELAS X RPL 1</h1>
+            <p>Buku Angkatan Digital & Galeri Profil Siswa Rekayasa Perangkat Lunak</p>
+        </div>
+
+        <!-- Informasi Umum Kelas -->
+        <div class="section-title">📌 Informasi Umum Kelas</div>
+        <table class="info-table">
+            <tr>
+                <th>Wali Kelas</th>
+                <td>Moh.Shobirin.S.Kom.Gr</td>
+            </tr>
+            <tr>
+                <th>Ketua Kelas</th>
+                <td>Muhammad Bilal Akbar</td>
+            </tr>
+            <tr>
+                <th>Jumlah Siswa</th>
+                <td>36 Siswa</td>
+            </tr>
+            <tr>
+                <th>Slogan Kelas</th>
+                <td>"Coding is the best" 🚀</td>
+            </tr>
+        </table>
+
+        <!-- Daftar Anggota Kelas -->
+        <div class="section-title">📁 Daftar Anggota Kelas:</div>
+        <div class="member-list">
+            <ol>
+                <li><a href="#bilal">Muhammad Bilal Akbar (Ketua Kelas)</a></li>
+                <li><a href="#tasya">Ana Al Natasya F.(Sekretaris 1)</a></li>
+                <li><a href="#atar">Attar Ibrar A. (Sekertaris 2)</a></li>
+                <li><a href="#nisah">Khoirun Nisah (Bendahara 1)</a></li>
+                <li><a href="#azza">Rihhadatul Azzah (Bendahara 2)</a></li>
+            </ol>
+        </div>
+
+        <!-- PROFIL SISWA #01 - Nikeisha Anindita -->
+        <div class="student-card" id="bima">
+            <div class="student-card-header">
+                👤 PROFIL SISWA #01 - Nikeisha Anindita
+            </div>
+            <div class="student-card-body">
+                <div class="student-photo-col">
+                    <div class="photo-box">
+                        <img src="IMG-20261013-WA0013_99d8f5.jpg" alt="Foto Nikeisha Anindita">
+                    </div>
+                    <div class="audio-player">
+                        🔊 Suara Perkenalan:
+                        <audio controls>
+                            <source src="keysa-audio.mp3" type="audio/mpeg">
+                            Browser Anda tidak mendukung elemen audio.
+                        </audio>
+                    </div>
+                </div>
+                <div class="student-info-col">
+                    <ul class="student-details">
+                        <li><strong>NISN:</strong> 0119293954</li>
+                        <li><strong>Tempat, Tgl Lahir:</strong> Kutai Kartanegara, 22 Juni 2011 </li>
+                        <li><strong>Hobi:</strong> Basket </li>
+                        <li><strong>Cita-cita:</strong> Atletik </li>
+                        <li><strong>Motto:</strong> "Kegagalan adalah langkah keberhasilan"</li>
+                    </ul>
+                    <div class="link-history">
+                        <a href="#riwayat-keysa">▶ 🏆 Lihat Riwayat & Keahlian</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back-to-top">
+            <a href="#top">⬆ Kembali ke Atas</a>
+        </div>
+
+        <!-- PROFIL SISWA #02 - Gesti Anggraini -->
+        <div class="student-card" id="khoirun">
+            <div class="student-card-header">
+                👤 PROFIL SISWA #02 - Gesti Anggraini 
+            </div>
+            <div class="student-card-body">
+                <div class="student-photo-col">
+                    <div class="photo-box">Foto gesti</div>
+                    <div class="audio-player">
+                        🔊 Suara Perkenalan:
+                        <audio controls>
+                            <source src="gesti-audio.mp3" type="audio/mpeg">
+                            Browser Anda tidak mendukung elemen audio.
+                        </audio>
+                    </div>
+                </div>
+                <div class="student-info-col">
+                    <ul class="student-details">
+                        <li><strong>NISN:</strong> 0109193449 </li>
+                        <li><strong>Tempat, Tgl Lahir:</strong> Sidoarjo, 03 Oktober 2010</li>
+                        <li><strong>Hobi:</strong> jalan jalan </li>
+                        <li><strong>Cita-cita:</strong> polwan </li>
+                        <li><strong>Motto:</strong> "Jadilah orang yang baik karena Allah menyukai orang-orang yang selalu berbuat baik."</li>
+                    </ul>
+                    <div class="link-history">
+                        <a href="#riwayat-gesti">▶ 🏆 Lihat Riwayat & Keahlian</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back-to-top">
+            <a href="#top">⬆ Kembali ke Atas</a>
+        </div>
+
+        <!-- PROFIL SISWA #03 - Wiwin Nur Hayati -->
+        <div class="student-card" id="wiwin">
+            <div class="student-card-header">
+                👤 PROFIL SISWA #03 - WIWIN NUR HAYATI
+            </div>
+            <div class="student-card-body">
+                <div class="student-photo-col">
+                    <div class="photo-box">Foto Wiwin</div>
+                    <div class="audio-player">
+                        🔊 Suara Perkenalan:
+                        <audio controls>
+                            <source src="wiwin-audio.mp3" type="audio/mpeg">
+                            Browser Anda tidak mendukung elemen audio.
+                        </audio>
+                    </div>
+                </div>
+                <div class="student-info-col">
+                    <ul class="student-details">
+                        <li><strong>NISN:</strong> 0101294347</li>
+                        <li><strong>Tempat, Tgl Lahir:</strong> Pasuruan, 05 Juli 2010</li>
+                        <li><strong>Hobi:</strong> Membaca</li>
+                        <li><strong>Cita-cita:</strong> Koki</li>
+                        <li><strong>Motto:</strong> "Hiduplah sesuai kemauanmu."</li>
+                    </ul>
+                    <div class="link-history">
+                        <a href="#riwayat-wiwin">▶ 🏆 Lihat Riwayat & Keahlian</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back-to-top">
+            <a href="#top">⬆ Kembali ke Atas</a>
+        </div>
+
+        <!-- PROFIL SISWA #04 - Attar Ibrar A. -->
+        <div class="student-card" id="atar">
+            <div class="student-card-header">
+                👤 PROFIL SISWA #04 - ATTAR IBRAR A.
+            </div>
+            <div class="student-card-body">
+                <div class="student-photo-col">
+                    <div class="photo-box">Foto Attar</div>
+                    <div class="audio-player">
+                        🔊 Suara Perkenalan:
+                        <audio controls>
+                            <source src="atar-audio.mp3" type="audio/mpeg">
+                            Browser Anda tidak mendukung elemen audio.
+                        </audio>
+                    </div>
+                </div>
+                <div class="student-info-col">
+                    <ul class="student-details">
+                        <li><strong>NISN:</strong> 0119966916</li>
+                        <li><strong>Tempat, Tgl Lahir:</strong> Pasuruan, 03 Mei 2011</li>
+                        <li><strong>Hobi:</strong> Mengedit foto atau video</li>
+                        <li><strong>Cita-cita:</strong> Fakultas Kedokteran bidang Poli Anak</li>
+                        <li><strong>Motto:</strong> "Stay enthusiastic in doing goodness and never give up easily."</li>
+                    </ul>
+                    <div class="link-history">
+                        <a href="#riwayat-atar">▶ 🏆 Lihat Riwayat & Keahlian</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back-to-top">
+            <a href="#top">⬆ Kembali ke Atas</a>
+        </div>
+
+        <!-- PROFIL SISWA #05 - Dian Puspita Islamia -->
+        <div class="student-card" id="dian">
+            <div class="student-card-header">
+                👤 PROFIL SISWA #05 - Sofia Syahrani Amalia 
+            </div>
+            <div class="student-card-body">
+                <div class="student-photo-col">
+                    <div class="photo-box">Foto Dian</div>
+                    <div class="audio-player">
+                        🔊 Suara Perkenalan:
+                        <audio controls>
+                            <source src="sopia-audio.mp3" type="audio/mpeg">
+                            Browser Anda tidak mendukung elemen audio.
+                        </audio>
+                    </div>
+                </div>
+                <div class="student-info-col">
+                    <ul class="student-details">
+                        <li><strong>NISN:</strong> 0119682893 </li>
+                        <li><strong>Tempat, Tgl Lahir:</strong> Pasuruan, 6 Januari 2011</li>
+                        <li><strong>Hobi:</strong> Membaca buku </li>
+                        <li><strong>Cita-cita:</strong> Software engineer </li>
+                        <li><strong>Motto:</strong> "Its fine to fake it, until you make it, until you do, until its true-Taylor Swift"</li>
+                    </ul>
+                    <div class="link-history">
+                        <a href="#riwayat-sopia">▶ 🏆 Lihat Riwayat & Keahlian</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back-to-top">
+            <a href="#top">⬆ Kembali ke Atas</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
